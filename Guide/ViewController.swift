@@ -14,7 +14,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    @IBOutlet weak var phone: UITextField!
+    
+    @IBAction func phoneAction(_ sender: UITextField, forEvent event: UIEvent) {
+        if(phone.text=="123") {phone.text="456"}
+        phone.clearButtonMode = UITextField.ViewMode.always
+        
+    }
+    
+    
 }
 
