@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        phone.delegate = self as? UITextFieldDelegate
+        //phone.delegate = self as? UITextFieldDelegate
     }
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
