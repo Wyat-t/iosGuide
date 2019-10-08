@@ -197,6 +197,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Ax-iRe">
                                 <rect key="frame" x="191.5" y="735.5" width="31" height="30"/>
                                 <state key="normal" title="确认"/>
+                                <connections>
+                                    <action selector="confirmTouchUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqz-RF-eNT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -207,7 +210,6 @@
                             <constraint firstItem="RJe-kg-vyo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="DTU-vU-ebN"/>
                             <constraint firstItem="8Kp-uU-z1a" firstAttribute="top" secondItem="Lhh-QQ-Y9H" secondAttribute="bottom" constant="50" id="E0J-Nw-pvx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jeg-x6-BxZ" secondAttribute="trailing" constant="20" id="Izy-ca-HnX"/>
-                            <constraint firstItem="xtu-Ax-iRe" firstAttribute="firstBaseline" secondItem="ZgY-ye-qta" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="NsX-hT-gQH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9HH-iJ-rux" secondAttribute="trailing" constant="20" id="Nta-HV-u4l"/>
                             <constraint firstItem="9HH-iJ-rux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PcA-Ew-mLJ"/>
                             <constraint firstItem="xtu-Ax-iRe" firstAttribute="top" secondItem="7eW-67-enm" secondAttribute="bottom" constant="50" id="WL0-8c-Niy"/>
@@ -224,6 +226,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="nameLabel" destination="Lhh-QQ-Y9H" id="XWj-hf-Hrx"/>
                         <outlet property="phone" destination="DqK-8q-ICj" id="qDX-VL-s4Q"/>
                     </connections>
                 </viewController>
