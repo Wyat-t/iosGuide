@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //phone.delegate = self as? UITextFieldDelegate
+        phone.delegate = self as? UITextFieldDelegate
     }
     @IBOutlet weak var phone: UITextField!
     @IBOutlet weak var nameLabel: UILabel!
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //phone.resignFirstResponder()
+        phone.resignFirstResponder()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
