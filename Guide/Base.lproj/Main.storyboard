@@ -111,6 +111,10 @@
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="phoneAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="bh4-bv-2bz"/>
+                                                    <action selector="phoneAction:forEvent:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="n8M-Pd-uGt"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -219,6 +223,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="phone" destination="DqK-8q-ICj" id="qDX-VL-s4Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
