@@ -100,7 +100,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3PK-WX-NQ7">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEv-VJ-vDu">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="姓名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEv-VJ-vDu">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -117,7 +117,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="I9G-Dw-8O8">
                                         <rect key="frame" x="0.0" y="35" width="374" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="家庭" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H4-1S-Kdd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8H4-1S-Kdd">
                                                 <rect key="frame" x="0.0" y="0.0" width="35" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -190,16 +190,23 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xtu-Ax-iRe">
+                                <rect key="frame" x="191.5" y="735.5" width="31" height="30"/>
+                                <state key="normal" title="确认"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RJe-kg-vyo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2e1-hj-kJN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jeg-x6-BxZ" secondAttribute="trailing" constant="20" id="8tB-pk-tfi"/>
+                            <constraint firstItem="xtu-Ax-iRe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cka-0t-1N3"/>
                             <constraint firstItem="RJe-kg-vyo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="DTU-vU-ebN"/>
                             <constraint firstItem="8Kp-uU-z1a" firstAttribute="top" secondItem="Lhh-QQ-Y9H" secondAttribute="bottom" constant="50" id="E0J-Nw-pvx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Jeg-x6-BxZ" secondAttribute="trailing" constant="20" id="Izy-ca-HnX"/>
+                            <constraint firstItem="xtu-Ax-iRe" firstAttribute="firstBaseline" secondItem="ZgY-ye-qta" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="NsX-hT-gQH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="9HH-iJ-rux" secondAttribute="trailing" constant="20" id="Nta-HV-u4l"/>
                             <constraint firstItem="9HH-iJ-rux" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PcA-Ew-mLJ"/>
+                            <constraint firstItem="xtu-Ax-iRe" firstAttribute="top" secondItem="7eW-67-enm" secondAttribute="bottom" constant="50" id="WL0-8c-Niy"/>
                             <constraint firstItem="8Kp-uU-z1a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bO4-II-pe7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7eW-67-enm" secondAttribute="trailing" constant="20" id="btK-Sj-MCQ"/>
                             <constraint firstItem="Lhh-QQ-Y9H" firstAttribute="top" secondItem="RJe-kg-vyo" secondAttribute="bottom" constant="30" id="fvI-WZ-jVS"/>
