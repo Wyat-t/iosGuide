@@ -18,25 +18,8 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.name.text = foodForEdit?.name
-        self.descriptionText.text = foodForEdit?.description
+        self.descriptionText.text = foodForEdit?.foodDescription
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func nameEditDidEnd(_ sender: Any) {
-        foodForEdit?.name = name.text
-    }
-    
-    @IBAction func descriptionEditDidEnd(_ sender: Any) {
-        foodForEdit?.description = descriptionText.text
-    }
-    
-    
-    @IBAction func nameValueChanged(_ sender: Any) {
-        foodForEdit?.name = name.text
-    }
-    
-    @IBAction func descriptionValueChanged(_ sender: Any) {
-        foodForEdit?.description = descriptionText.text
     }
     
 
@@ -48,7 +31,7 @@ class DetailViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if segue.identifier == "saveToList" {
-            foodForEdit = Food(name: name.text, description: descriptionText.text)
+            foodForEdit = Food(name: name.text, foodDescription: descriptionText.text)
         }
     }
     

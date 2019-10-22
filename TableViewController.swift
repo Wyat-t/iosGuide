@@ -13,11 +13,25 @@ class TableViewController: UITableViewController {
     var foodList: [Food] = [Food]()
     
     func initFoodList() {
-        foodList.append(Food(name: "cake", description: "sweet"))
-        foodList.append(Food(name: "apple", description: "fruit"))
-        foodList.append(Food(name: "soup", description: "sour"))
+        foodList = loadFoodFile() ?? []
+        if foodList.count==0 {
+            foodList.append(Food(name: "cake", foodDescription: "sweet"))
+            foodList.append(Food(name: "apple", foodDescription: "fruit"))
+        }
+        
+    }
+    
+    func saveFoodFile() {
+        let success = NSKeyedArchiver.archiveRootObject(foodList, toFile: Food.ArchiveURL.path)
+        if !success {
+            print("failed...")
+        }
     }
 
+    func loadFoodFile() -> [Food]? {
+        return (NSKeyedUnarchiver.unarchiveObject(withFile: Food.ArchiveURL.path) as? [Food])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initFoodList()
@@ -36,15 +50,13 @@ class TableViewController: UITableViewController {
             if let addFood = addFoodVC.foodForEdit{
                 if let selectedIndexPath = tableView.indexPathForSelectedRow{
                     foodList[(selectedIndexPath as NSIndexPath).row] = addFood
+                    saveFoodFile()
                     tableView.reloadRows(at: [selectedIndexPath], with: .none)
-                    print(foodList.count)
-                    print(addFood.name)
                 } else {
                     foodList.append(addFood)
+                    saveFoodFile()
                     let newIndexPath = IndexPath(row: foodList.count-1, section: 0)
                     tableView.insertRows(at: [newIndexPath], with: .automatic)
-                    print(foodList.count)
-                    print(addFood.name)
                 }
             }
         }
@@ -80,17 +92,19 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
+            foodList.remove(at: indexPath.row)
+            saveFoodFile()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

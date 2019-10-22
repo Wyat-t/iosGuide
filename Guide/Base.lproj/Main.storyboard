@@ -37,7 +37,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Food List" id="7jj-0U-gBX">
-                        <barButtonItem key="rightBarButtonItem" title="add" id="laR-JE-cv0">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="laR-JE-cv0">
                             <connections>
                                 <segue destination="7QM-4M-WcA" kind="show" id="pDB-B8-suP"/>
                             </connections>
@@ -62,10 +62,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="nameEditDidEnd:" destination="7QM-4M-WcA" eventType="editingDidEnd" id="huD-AP-k3C"/>
-                                    <action selector="nameValueChanged:" destination="7QM-4M-WcA" eventType="valueChanged" id="y9b-qT-vlx"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2uj-1s-5TM">
                                 <rect key="frame" x="42" y="381" width="97" height="30"/>
@@ -73,10 +69,6 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="descriptionEditDidEnd:" destination="7QM-4M-WcA" eventType="editingDidEnd" id="TSx-5L-8c8"/>
-                                    <action selector="descriptionValueChanged:" destination="7QM-4M-WcA" eventType="valueChanged" id="vJ8-Za-IMA"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
