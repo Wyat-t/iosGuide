@@ -15,8 +15,8 @@ class TableViewController: UITableViewController {
     func initFoodList() {
         foodList = loadFoodFile() ?? []
         if foodList.count==0 {
-            foodList.append(Food(name: "cake", foodDescription: "sweet"))
-            foodList.append(Food(name: "apple", foodDescription: "fruit"))
+            foodList.append(Food(name: "cake", foodDescription: "sweet", foodAvatar: nil))
+            foodList.append(Food(name: "apple", foodDescription: "fruit", foodAvatar: nil))
         }
         
     }
@@ -34,6 +34,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 106
         initFoodList()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -75,11 +76,12 @@ class TableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "foodCell", for: indexPath) as! TableViewCell
 
         // Configure the cell...
-        cell.textLabel?.text = foodList[indexPath.row].name
-        
+        cell.name?.text = foodList[indexPath.row].name
+        cell.foodDescription?.text = foodList[indexPath.row].foodDescription
+        cell.foodAvatar?.image = foodList[indexPath.row].foodAvatar
         return cell
     }
     
